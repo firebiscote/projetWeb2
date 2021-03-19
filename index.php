@@ -16,5 +16,4 @@ if (isset($_GET['page']) && file_exists(_TPL_.'pages/'.str_replace('.', '', $_GE
     $smarty->display(_TPL_.'pages/'.$_GET['page'].'.tpl');
 else
     $smarty->display(_TPL_ . 'pages/home.tpl');
-
 $smarty->display(_TPL_ . 'footer.tpl');
