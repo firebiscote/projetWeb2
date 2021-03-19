@@ -38,10 +38,4 @@ class Company extends Table {
         else
             throw new Exception($property.' is not a valid property or '.$value.' is not a valid value !');
     }
-    public function hydrate(array $data) {
-        foreach ($data as $key => $value) {
-            $key = '_'.$key;
-            $this->$key = $value;
-        }
-    }
 }
