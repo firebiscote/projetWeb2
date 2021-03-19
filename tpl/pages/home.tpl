@@ -1,3 +1,3 @@
 <div>
-      Ma variable vaut 
+      Ma variable vaut {$tes}
 </div>

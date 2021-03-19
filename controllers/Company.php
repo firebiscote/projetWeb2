@@ -7,7 +7,6 @@ class Company extends Table {
     private $_cesiTrainee;
     private $_confidence;
     public function __get($property) {
-        echo $property;
         if ('_id' === $property)
             return $this->_id;
         elseif ('_name' === $property)
@@ -38,5 +37,11 @@ class Company extends Table {
             $this->_confidence = $value;
         else
             throw new Exception($property.' is not a valid property or '.$value.' is not a valid value !');
+    }
+    public function hydrate(array $data) {
+        foreach ($data as $key => $value) {
+            $key = '_'.$key;
+            $this->$key = $value;
+        }
     }
 }
