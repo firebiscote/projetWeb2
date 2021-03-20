@@ -1,6 +1,6 @@
 <?php
 require_once 'Table.php';
-class Target extends Table {
+class Promotion extends Table {
     private $_name;
     public function __get($property) {
         if ('_id' === $property)

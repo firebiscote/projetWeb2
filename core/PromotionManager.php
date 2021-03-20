@@ -1,9 +1,9 @@
 <?php
 require 'db.php';
-class CompanyManager extends Db {
+class PromotionManager extends Db {
     public function getAll() {
         $db = $this->dbConnect('root', '');
-        $query = $db->prepare('SELECT * FROM company');
+        $query = $db->prepare('SELECT * FROM promotion');
         $query->execute();
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
         return $result;

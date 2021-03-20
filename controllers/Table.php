@@ -1,5 +1,5 @@
 <?php
-class Table {
+abstract class Table {
     protected $_id;
     public function __construct(array $data) {
         $this->hydrate($data);

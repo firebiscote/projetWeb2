@@ -1,9 +1,9 @@
 <?php
 require 'db.php';
-class CompanyManager extends Db {
+class SkillManager extends Db {
     public function getAll() {
         $db = $this->dbConnect('root', '');
-        $query = $db->prepare('SELECT * FROM company');
+        $query = $db->prepare('SELECT * FROM skill');
         $query->execute();
         $result = $query->fetchAll(PDO::FETCH_ASSOC);
         return $result;

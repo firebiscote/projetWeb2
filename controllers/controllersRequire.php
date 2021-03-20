@@ -4,4 +4,4 @@
     require_once 'Locality.php';
     require_once 'Offer.php';
     require_once 'Skill.php';
-    require_once 'Target.php';
+    require_once 'Promotion.php';
