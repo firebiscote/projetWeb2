@@ -7,3 +7,4 @@ require_once 'Skill.php';
 require_once 'Promotion.php';
 require_once 'Rating.php';
 require_once 'Right.php';
+require_once 'User.php';
