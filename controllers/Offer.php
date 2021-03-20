@@ -1,6 +1,7 @@
 <?php
 require_once 'Table.php';
 require_once 'Locality.php';
+require_once 'Skill.php';
 class Offer extends Table {
     private $_name;
     private $_wage;
