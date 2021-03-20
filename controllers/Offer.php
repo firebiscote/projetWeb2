@@ -1,5 +1,6 @@
 <?php
 require_once 'Table.php';
+require_once 'Locality.php';
 class Offer extends Table {
     private $_name;
     private $_wage;
@@ -7,8 +8,9 @@ class Offer extends Table {
     private $_endDate;
     private $_seat;
     private $_state;
-    private $_idCompany;
-    private $_idLocality;
+    private $_companyId;
+    private $_locality;
+    private array $_skill;
     public function __get($property) {
         if ('_id' === $property)
             return $this->_id;
@@ -24,10 +26,12 @@ class Offer extends Table {
             return $this->_seat;
         elseif ('_state' === $property)
             return $this->_state;
-        elseif ('_idCompany' === $property)
-            return $this->_idCompany;
-        elseif ('_idLocality' === $property)
-            return $this->_idLocality;
+        elseif ('_companyId' === $property)
+            return $this->_companyId;
+        elseif ('_locality' === $property)
+            return $this->_locality;
+        elseif ('_skill' === $property)
+            return $this->_skill;
         else
             throw new Exception('unknown property !');
     }
@@ -46,10 +50,12 @@ class Offer extends Table {
             $this->_seat = $value;
         elseif ('_state' === $property && gettype($value) == 'boolean')
             $this->_state = $value;
-        elseif ('_idCompany' === $property && gettype($value) == 'integer' && $value > 0)
-            $this->_idCompany = $value;
-        elseif ('_idLocality' === $property && gettype($value) == 'integer' && $value > 0)
-            $this->_idLocality = $value;
+        elseif ('_companyId' === $property && gettype($value) == 'integer' && $value > 0)
+            $this->_companyId = $value;
+        elseif ('_locality' === $property && gettype($value) == 'Locality')
+            $this->_locality = $value;
+        elseif ('_skill' === $property && gettype($value) == 'Skill')
+            $this->_locality = $value;
         else
             throw new Exception($property.' is not a valid property or '.$value.' is not a valid value !');
     }
