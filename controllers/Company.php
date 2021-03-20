@@ -1,5 +1,5 @@
 <?php
-require 'Table.php';
+require_once 'Table.php';
 class Company extends Table {
     private $_name;
     private $_mail;

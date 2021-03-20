@@ -1,5 +1,5 @@
 <?php
-require 'Table.php'
+require_once 'Table.php'
 class Locality extends Table {
     private $_name;
     public function __get($property) {

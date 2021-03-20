@@ -1,5 +1,5 @@
 <?php
-require 'Table.php';
+require_once 'Table.php';
 class Offer extends Table {
     private $_name;
     private $_wage;
