@@ -1,5 +1,7 @@
 <?php
        require_once 'controllersRequire.php';
+       require_once 'core/OfferManager.php';
        $donne = ['name' => ''];
        $compa = new Company($donne);
-       $smarty->assign('tes', $compa->_name);
+       $lo = new OfferManager();
+       $smarty->assign('tes', $lo->getAll());

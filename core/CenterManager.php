@@ -1,26 +1,11 @@
 <?php
-require 'db.php';
-class CenterManager extends Db {
-    public function getAll() {
-        $db = $this->dbConnect('root', '');
-        $query = $db->prepare('SELECT * FROM center');
-        $query->execute();
-        $result = $query->fetchAll(PDO::FETCH_ASSOC);
-        return $result;
-    }
-    public function getOneById($îd) {
-        
-    }
-    public function getByAttribute($attribute, $data) {
-
+require_once 'Database.php';
+class CenterManager extends Database {
+    public static function tableCheck() {
+        return 'center';
     }
     public function add($data) {
-
-    }
-    public function deleteById($id) {
-
     }
     public function updateById($id, $data) {
-
     }
 }
