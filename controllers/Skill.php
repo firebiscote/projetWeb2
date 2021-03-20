@@ -1,5 +1,5 @@
 <?php
-require_once 'Table.php'
+require_once 'Table.php';
 class Skill extends Table {
     private $_name;
     public function __get($property) {

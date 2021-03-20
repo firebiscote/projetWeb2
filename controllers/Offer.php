@@ -10,7 +10,7 @@ class Offer extends Table {
     private $_state;
     private $_companyId;
     private $_locality;
-    private array $_skill;
+    private $_skill;
     public function __get($property) {
         if ('_id' === $property)
             return $this->_id;
@@ -54,8 +54,8 @@ class Offer extends Table {
             $this->_companyId = $value;
         elseif ('_locality' === $property && gettype($value) == 'Locality')
             $this->_locality = $value;
-        elseif ('_skill' === $property && gettype($value) == 'Skill')
-            $this->_locality = $value;
+        elseif ('_skill' === $property && gettype($value) == 'Skill' && is_array($value))
+            $this->_skill = $value;
         else
             throw new Exception($property.' is not a valid property or '.$value.' is not a valid value !');
     }

@@ -1,5 +1,5 @@
 <?php
-require_once 'Table.php'
+require_once 'Table.php';
 class Rating extends Table {
     private $_mark;
     private $_comment;
