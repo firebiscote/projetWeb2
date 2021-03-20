@@ -1,5 +1,5 @@
 <?php
-require_once 'Databas.php';
+require_once 'Database.php';
 class OfferManager extends Database {
     public static function tableCheck() {
         return 'offer';
