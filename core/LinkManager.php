@@ -1,6 +1,6 @@
 <?php
 require_once 'Database.php';
-class CompanyManager extends Database {
+class LinkManager extends Database {
     public static function tableCheck() {
         return 'link';
     }
