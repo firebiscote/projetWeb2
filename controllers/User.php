@@ -38,7 +38,7 @@ class User extends Table {
             $this->_firstName = $value;
         elseif ('_mail' === $property && gettype($value) == 'string' && strlen($value) < 31)
             $this->_mail = $value;
-        elseif ('_hash' === $property && gettype($value) == 'string' && strlen($value) < 33)
+        elseif ('_hash' === $property && gettype($value) == 'string' && strlen($value) > 59 && strlen($value) < 61)
             $this->_hash = $value;
         elseif ('_role' === $property && gettype($value) == 'string' && strlen($value) < 2)
             $this->_role = $value;
