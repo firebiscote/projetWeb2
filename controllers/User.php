@@ -5,7 +5,7 @@ class User extends Table {
     private $_name;
     private $_firstName;
     private $_mail;
-    private $_hash;
+    private $_hash; //password_hash()
     private $_role;
     private $_right;
     private $_centerId;
