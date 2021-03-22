@@ -7,8 +7,3 @@
             <link rel="shortcut icon" href="/web/images/favicon.ico"/>
             <!-- On importe jQuery -->
             <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
-    </head>
-    <body>
-        <div>
-                Ceci est notre header
-        </div>

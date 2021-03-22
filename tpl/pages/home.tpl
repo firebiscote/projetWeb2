@@ -1,3 +1,5 @@
-<div>
-      Ma variable vaut {$tes}
-</div>
+</head>
+<body>
+      <div>
+            Ma variable vaut {$tes}
+      </div>
